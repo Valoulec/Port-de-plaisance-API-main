@@ -1,7 +1,6 @@
 {
   "name": "port-de-plaisance",
   "version": "1.0.0",
-  "main": "app.js",
   "scripts": {
     "test": "mocha tests/**/*.test.js --exit",
     "docs": "jsdoc -c jsdoc.json",
