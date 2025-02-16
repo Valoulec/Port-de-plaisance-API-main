@@ -4,7 +4,7 @@
  */
 require("dotenv").config();
 console.log("Clé secrète chargée :", process.env.JWT_SECRET);
-
+console.log("🔍 URI MongoDB :", process.env.MONGO_URI);
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -59,7 +59,10 @@ app.use(session({
 /**
  * Connexion à la base de données MongoDB
  */
-mongoose.connect('mongodb://127.0.0.1:27017/port-de-plaisance', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_URI, { 
+    useNewUrlParser: true, 
+    useUnifiedTopology: true 
+  })
 
 const port = 3000;
 
