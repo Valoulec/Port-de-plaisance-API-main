@@ -3,8 +3,6 @@
  * @module app
  */
 require("dotenv").config();
-console.log("Clé secrète chargée :", process.env.JWT_SECRET);
-console.log("🔍 URI MongoDB :", process.env.MONGO_URI);
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -83,6 +81,7 @@ const createDefaultUser = async () => {
     const user = await User.findOne({ email: 'john.doe@mail.com' });
     if (!user) {
         const newUser = new User({
+            name: 'John Doe',
             email: 'john.doe@mail.com',
             password: 'Admin'
         });
