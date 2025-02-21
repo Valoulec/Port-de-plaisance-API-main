@@ -3,6 +3,10 @@
 ## Site en Ligne
 
 https://port-de-plaisance-api.onrender.com
+## Conection
+
+  Email: john.doe@mail.com
+  Password: Admin
 
 ## Fonctionnalités principales
 
